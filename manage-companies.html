@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Conversion Tool</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="headerWrap">
+			<div id="header">
+			</div>
+		</div>
+		<div id="contentWrap">
+			<div id="content">
+				<h3>Companies</h3>
+				<table cellpadding="8" cellspacing="1" border="1" align="center">
+					<tr>
+						<th>Name</th>
+						<th>Is Active</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Name</td>
+						<td>true</td>
+						<td><a href="manage-stores.html">Manage Stores</a></td>
+						<td><a href="manage-campaign.html">Manage Campaigns</a></td>
+						<td><a href="#" id="edit">Edit</a>&nbsp;<a href="#" onclick="confirm('Are you sure, you want to delete?')">Delete</a>&nbsp;<a href="#">Active/Inactive</a></td>
+					</tr>
+				</table>
+				<form id="frmUpload" style="display:none;margin-top:40px;">
+					<p style="text-align: center;"><b>Update Company</b></p>
+					<input type="text" id="name" name="name" placeholder="Enter Company Name" required />
+					<input type="submit" id="btnSubmit" name="btnSubmit" value="Update" />
+				</form>
+			</div>
+		</div>
+		<div id="footerWrap">
+			<div id="footer">
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#edit").click(function(e){
+    			$("#frmUpload").toggle();
+    		});
+    		$("#btnSubmit").click(function(e){
+    			$("#frmUpload").toggle();
+    		});
+    	})
+    </script>
+</body>
+</html>

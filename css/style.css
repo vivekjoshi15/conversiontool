@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input
+ {  
+ 	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;	
+	font-size: 100%;	
+
+ } 
+
+body {
+	font-family: Arial, Helvetica;
+	font-size:13px;
+    font-size-adjust:none;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:normal;
+	background: #ffffff;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #353535;
+}
+
+.clear
+{
+	clear: both;
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#headerWrap {
+	width:100%;
+	text-align:center;
+}
+
+
+#header {
+	width:940px;
+	text-align:center;
+	height:18px;
+	min-height: 100px;
+    margin:0 auto;
+    padding:3px 0px;
+}
+
+#header a
+{
+	color:#999999;
+	font-size:11px;
+	font-family:Arial;
+	text-decoration:none;
+}
+
+#header a:hover
+{
+	text-decoration:underline;
+}
+
+#contentWrap
+{
+	width:100%;
+	text-align:center;
+}
+
+#content {
+	width:940px;
+	text-align:left;
+    margin:0 auto;
+    padding-top:10px;
+    line-height:9px;
+}
+
+#content p
+{
+	padding-bottom: 10px;
+}
+
+#content h3
+{
+	padding: 20px 0;
+	text-align:center;
+}
+
+#content table
+{	
+	font-family: Arial, Helvetica;
+	font-size:13px;
+}
+
+#container
+{
+	width:100%;
+	padding:0px auto;
+	margin:0 auto;
+	text-align:center;	
+}
+
+#footerWrap {
+	height:20px;
+	bottom:0px;
+	margin-top:4px;
+}
+
+#footer {
+	width:940px;
+	text-align:left;
+    margin:0 auto;
+    padding-top:10px;
+    line-height:9px;
+}
+
+form{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="tel"],
+form input[type="email"]
+{
+	display: flex;
+    padding:10px 10px;
+    border: solid 1px #cecece;
+    width:60%;
+    margin-bottom:5px;
+    border-radius: 10px;
+}
+
+form input[type="submit"]
+{
+	display: flex;
+    padding:10px;
+    border: solid 1px #cecece;
+    width:200px;
+    margin-bottom:5px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #666;
+    color:#fff;
+    text-align: center;
+    justify-content: center;
+}

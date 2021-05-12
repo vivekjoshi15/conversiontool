@@ -1,0 +1,168 @@
+<html>
+<head>
+	<title>Conversion Tool</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="headerWrap">
+			<div id="header">
+			</div>
+		</div>
+		<div id="contentWrap">
+			<div id="content">
+				<p style="text-align: center;font-weight: bold;font-size: 14px">Company Name</p>
+				<h3>Campaigns</h3>
+				<table cellpadding="8" cellspacing="1" border="1" align="center">
+					<tr>
+						<th>Name</th>
+						<th>Start Date</th>
+						<th>End Date</th>
+						<th>Text Color</th>
+						<th>Header Color</th>
+						<th>Header Text</th>
+						<th>Created Date</th>
+						<th>Is Active</th>
+						<th></th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Name</td>
+						<td>Start Date</td>
+						<td>End Date</td>
+						<td>Text Color</td>
+						<td>Header Color</td>
+						<td>Header Text</td>
+						<td>Created Date</td>
+						<td>Is Active</td>
+						<td><a href="#" id="viewDetail">View Details</a></td>
+						<td><a href="#" id="edit">Edit</a>&nbsp;<a href="#" onclick="confirm('Are you sure, you want to delete?')">Delete</a>&nbsp;<a href="#">Active/Inactive</a></td>
+					</tr>
+				</table>				
+				<form id="frmUpload" style="display:none;margin-top:40px;">
+					<p style="text-align: center;"><b>Update Campaign</b></p>
+					<input type="text" id="name" name="name" placeholder="Enter Campaign Name" required />
+					<input type="date" id="start" name="start" placeholder="Enter Start Date" required />
+					<input type="date" id="end" name="end" placeholder="Enter End Date" required />
+					<input type="text" id="textColor" name="textColor" placeholder="Enter Text Color" />
+					<input type="text" id="headerColor" name="headerColor" placeholder="Enter Header Color" />
+					<input type="text" id="headerText" name="headerText" placeholder="Enter Header Text" />
+					<input type="submit" id="btnSubmit" name="btnSubmit" value="Update" />
+				</form>
+				<div id="details" style="display:none;">
+					<h3>Campaign Stores</h3>
+					<table cellpadding="8" cellspacing="1" border="1" align="center">
+						<tr>
+							<th>Store Name</th>
+							<th>Is Module 1</th>
+							<th>Is Module 2</th>
+							<th>Is Module 3</th>
+							<th>Is Module 4</th>
+							<th>Is Module 5</th>
+							<th>Is Module 6</th>
+							<th>Is Module 7</th>
+							<th>Is Active</th>
+							<th></th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>Store Name 1</td>
+							<td>Yes</td>
+							<td>Yes</td>
+							<td>Yes</td>
+							<td>No</td>
+							<td>No</td>
+							<td>Yes</td>
+							<td>Yes</td>
+							<td>Is Active</td>
+							<td><a href="#" class="viewReport">View Report</a></td>
+							<td><a href="#" class="edit2">Edit</a>&nbsp;<a href="#" onclick="confirm('Are you sure, you want to delete?')">Delete</a>&nbsp;<a href="#">Active/Inactive</a></td>
+						</tr>
+						<tr>
+							<td>Store Name 2</td>
+							<td>Yes</td>
+							<td>No</td>
+							<td>Yes</td>
+							<td>No</td>
+							<td>Yes</td>
+							<td>Yes</td>
+							<td>Yes</td>
+							<td>Is Active</td>
+							<td><a href="#" class="viewReport">View Report</a></td>
+							<td><a href="#" class="edit2">Edit</a>&nbsp;<a href="#" onclick="confirm('Are you sure, you want to delete?')">Delete</a>&nbsp;<a href="#">Active/Inactive</a></td>
+						</tr>
+					</table>
+				</div>				
+				<form id="frmUpload2" style="display:none;margin-top:40px;">
+					<p style="text-align: center;"><b>Update Campaign Store</b></p>
+					<p style="text-align: left;">Module 1? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<p style="text-align: left;">Module 2? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<p style="text-align: left;">Module 3? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<p style="text-align: left;">Module 4? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<p style="text-align: left;">Module 5? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<p style="text-align: left;">Module 6? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<p style="text-align: left;">Module 7? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<input type="submit" id="btnSubmit2" name="btnSubmit2" value="Update" />
+				</form>
+				<div id="report" style="display:none;">
+					<h3>Store Campaign Report</h3>
+					<table cellpadding="8" cellspacing="1" border="1" align="center">
+						<tr>
+							<th>Source</th>
+							<th>Browser</th>
+							<th>Ip Address</th>
+							<th>Is Module 3</th>
+							<th>Landing Datetime</th>
+							<th>Selected Module</th>
+							<th>Module Open Datetime</th>
+						</tr>
+						<tr>
+							<td>Source</td>
+							<td>Browser</td>
+							<td>Ip Address</td>
+							<td>Is Module 3</td>
+							<td>Landing Datetime</td>
+							<td>Selected Module</td>
+							<td>Module Open Datetime</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="footerWrap">
+			<div id="footer">
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#viewDetail").click(function(e){
+    			$("#details").toggle();
+    			$("#report").hide();
+    			$("#frmUpload").hide();
+    		});
+    		$(".viewReport").click(function(e){
+    			$("#report").toggle();
+    		});
+    		$("#edit").click(function(e){
+    			$("#frmUpload").toggle();
+    			$("#details").hide();
+    			$("#report").hide();
+    		});
+    		$(".edit2").click(function(e){
+    			$("#frmUpload2").toggle();
+    			$("#report").hide();
+    		});
+    		$("#btnSubmit").click(function(e){
+    			$("#frmUpload").toggle();
+    		});
+    		$("#btnSubmit2").click(function(e){
+    			$("#frmUpload2").toggle();
+    		});
+    	})
+    </script>
+</body>
+</html>

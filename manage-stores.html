@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>Conversion Tool - Manage Stores</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="headerWrap">
+			<div id="header">
+			</div>
+		</div>
+		<div id="contentWrap">
+			<div id="content">
+				<h3>Stores</h3>
+				<table cellpadding="8" cellspacing="1" border="1">
+					<tr>
+						<th>Unique Url</th>
+						<th>Name</th>
+						<th>Address1</th>
+						<th>Address2</th>
+						<th>City</th>
+						<th>State</th>
+						<th>Zipcode</th>
+						<th>Phone</th>
+						<th>Email</th>
+						<th>Logo</th>
+						<th>Is Website</th>
+						<th>Is Calendar</th>
+						<th>Website Url</th>
+						<th>Calendar Url</th>
+						<th>Contact Form Url</th>
+						<th>Is Active</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Unique Url</td>
+						<td>Name</td>
+						<td>Address1</td>
+						<td>Address2</td>
+						<td>City</td>
+						<td>State</td>
+						<td>Zipcode</td>
+						<td>Phone</td>
+						<td>Email</td>
+						<td>Logo</td>
+						<td>Is Website</td>
+						<td>Is Calendar</td>
+						<td>Website Url</td>
+						<td>Calendar Url</td>
+						<td>Contact Form Url</td>
+						<td>true</td>
+						<td><a href="#" id="edit">Edit</a>&nbsp;<a href="#" onclick="confirm('Are you sure, you want to delete?')">Delete</a>&nbsp;<a href="#">Active/Inactive</a></td>
+					</tr>
+				</table>
+				<form id="frmUpload" style="display:none;margin-top:40px;">
+					<p style="text-align: center;"><b>Update Store</b></p>
+					<input type="text" id="name" name="name" placeholder="Enter Store Name" required />
+					<input type="text" id="Address1" name="Address1" placeholder="Enter Address1" required />
+					<input type="text" id="Address2" name="Address2" placeholder="Enter Address2" />
+					<input type="text" id="City" name="City" placeholder="Enter City" required />
+					<input type="text" id="State" name="State" placeholder="Enter State" required />
+					<input type="text" id="Zipcode" name="Zipcode" placeholder="Enter Zipcode" required />
+					<input type="tel" id="Phone" name="Phone" placeholder="Enter Phone" required />
+					<input type="email" id="Email" name="Email" placeholder="Enter Email" required />
+					<p style="text-align: left;">Is Website? <input type="checkbox" id="chkWebsiteUrl" name="chkWebsiteUrl" /></p>
+					<input type="text" id="WebsiteUrl" name="WebsiteUrl" placeholder="Enter Website Url" />
+					<p style="text-align: left;">Is Calendar? <input type="checkbox" id="chkCalendarUrl" name="chkCalendarUrl" /></p>
+					<input type="text" id="CalendarUrl" name="CalendarUrl" placeholder="Enter Calendar Url" />
+					<input type="text" id="ContactUrl" name="ContactUrl" placeholder="Enter Contact Form Url" />
+					<p>Upload logo <input type="file" id="fileLogo" name="fileLogo" /></p>
+					<input type="submit" id="btnSubmit" name="btnSubmit" value="Update" />
+				</form>
+			</div>
+		</div>
+		<div id="footerWrap">
+			<div id="footer">
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#edit").click(function(e){
+    			$("#frmUpload").toggle();
+    		});
+    		$("#btnSubmit").click(function(e){
+    			$("#frmUpload").toggle();
+    		});
+    	})
+    </script>
+</body>
+</html>
