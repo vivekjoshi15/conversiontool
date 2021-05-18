@@ -315,7 +315,7 @@ form input[type="submit"]
 	flex-direction: row;
 	margin: 0px;
 	width: 100%;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 
 #content #pnlTop h3{
@@ -326,6 +326,7 @@ form input[type="submit"]
 
 #content #pnlTop a{
 	display: flex;
+    justify-content: flex-end;
 }
 
 #pnlGrid,
@@ -427,4 +428,21 @@ form input[type="submit"]
     justify-items: center;
     justify-content: center;
     align-content: center;
+}
+
+a.btnCreate {
+    padding: 6px 15px;
+    cursor: pointer;
+    display: flex;
+    width: auto;
+    margin: 0;
+    background: #0052cc;
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
 }
