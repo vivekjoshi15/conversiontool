@@ -47,6 +47,7 @@
 					<h3></h3>
 					<a id="lnkNew" href="#">Create Company</a>
 				</div>
+				<div id="pnlGrid">
 					<div class="pass header">
 						<div>Name</div>
 						<div>Brand</div>
@@ -82,6 +83,7 @@
 							</a>
 						</div>
 					</div>
+				</div>
 				<form id="frmUpload" style="display:none;margin-top:40px;">
 					<p style="text-align: center;"><b id="pnlNew">Update Company</b></p>
 					<input type="text" id="name" name="name" placeholder="Enter Company Name" required />
@@ -107,17 +109,20 @@
     <script type="text/javascript">
     	$(document).ready(function(){
     		$("#lnkNew").click(function(e){
+    			$("#pnlGrid").hide();
     			$("#frmUpload").toggle();
     			$("#pnlNew").html("Create Company");
     			$("#btnSubmit").val("Create");
     		});
     		$("#edit").click(function(e){
+    			$("#pnlGrid").hide();
     			$("#frmUpload").toggle();
     			$("#pnlNew").html("Update Company");
     			$("#btnSubmit").val("Update");
     		});
     		$("#btnSubmit").click(function(e){
     			$("#frmUpload").toggle();
+    			$("#pnlGrid").show();
     		});
     	})
     </script>

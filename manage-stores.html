@@ -48,6 +48,7 @@
 					<h3></h3>
 					<a href="create-store.html">Create Store</a>
 				</div>
+				<div id="pnlGrid">
 					<div class="pass header">
 						<div>Name</div>
 						<div>Address1</div>
@@ -81,6 +82,7 @@
 							<a href="#" onclick="confirm('Are you sure, you want to delete?')" title="delete"><svg _ngcontent-gwj-c83="" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-gwj-c83="" fill-rule="evenodd" clip-rule="evenodd" d="M19.3333 11.334V10.6673C19.3333 9.93094 18.7364 9.33398 18 9.33398H14C13.2636 9.33398 12.6667 9.93094 12.6667 10.6673V11.334H10.6667C10.2985 11.334 10 11.6325 10 12.0007C10 12.3688 10.2985 12.6673 10.6667 12.6673H11.3333V20.0007C11.3333 21.1053 12.2288 22.0007 13.3333 22.0007H18.6667C19.7713 22.0007 20.6667 21.1053 20.6667 20.0007V12.6673H21.3333C21.7015 12.6673 22 12.3688 22 12.0007C22 11.6325 21.7015 11.334 21.3333 11.334H19.3333ZM18 10.6673H14V11.334H18V10.6673ZM19.3333 12.6673H12.6667V20.0007C12.6667 20.3689 12.9651 20.6673 13.3333 20.6673H18.6667C19.0349 20.6673 19.3333 20.3689 19.3333 20.0007V12.6673ZM14 14.0007H15.3333V19.334H14V14.0007ZM18 14.0007H16.6667V19.334H18V14.0007Z" fill="#8F92A1"></path></svg></a>
 						</div>
 					</div>
+				</div>
 				<form id="frmUpload" style="display:none;margin-top:40px;">
 					<p style="text-align: center;"><b>Update Store</b></p>
 					<input type="text" id="name" name="name" placeholder="Enter Store Name" required />
@@ -111,10 +113,12 @@
     <script type="text/javascript">
     	$(document).ready(function(){
     		$("#edit").click(function(e){
+    			$("#pnlGrid").hide();
     			$("#frmUpload").toggle();
     		});
     		$("#btnSubmit").click(function(e){
     			$("#frmUpload").toggle();
+    			$("#pnlGrid").show();
     		});
     	})
     </script>
